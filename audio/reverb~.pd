@@ -1,0 +1,68 @@
+#N canvas 110 122 636 615 12;
+#X obj 100 100 cnv 15 150 300 empty empty Reverb 50 12 1 14 -237241
+-66577 0;
+#X obj 156 447 inlet~;
+#X obj 141 771 outlet~;
+#X obj 204 771 outlet~;
+#X obj 115 214 vsl 40 150 0 1 0 1 \$0-revtime-send empty Time 0 -9
+0 10 -262144 -1 -1 11900 1;
+#X obj 194 214 vsl 40 150 1 0 0 1 \$0-brightness-send empty Bright
+0 -9 0 10 -262144 -1 -1 7900 1;
+#X obj 118 149 hsl 115 30 0 1 0 1 \$0-mix-send empty Dry:Wet -2 -8
+0 10 -262144 -1 -1 5100 1;
+#X obj 101 101 cnv 15 16 16 empty empty IN 2 6 0 8 -237241 -66577 0
+;
+#X obj 104 379 cnv 15 16 16 empty empty OUT:L -2 16 0 8 -237241 -66577
+0;
+#X obj 222 379 cnv 15 16 16 empty empty OUT:R 2 16 0 8 -237241 -66577
+0;
+#X obj 309 491 rev2~ 100 90 3000 20;
+#X obj 175 514 r \$0-mix-send;
+#X obj 175 554 swap 1;
+#X obj 175 582 -;
+#X obj 175 608 pack f 50;
+#X obj 175 636 line~;
+#X obj 292 586 pack f 50;
+#X obj 292 614 line~;
+#X obj 157 665 *~;
+#X obj 274 650 *~;
+#X obj 157 700 +~;
+#X obj 204 700 +~;
+#X obj 373 586 pack f 50;
+#X obj 373 614 line~;
+#X obj 355 649 *~;
+#X obj 446 429 r \$0-brightness-send;
+#X obj 313 428 r \$0-revtime-send;
+#X obj 313 451 * 100;
+#X floatatom 502 494 5 0 0 0 - - -;
+#X floatatom 375 455 5 0 0 0 - - -;
+#X obj 444 458 * 100;
+#X connect 1 0 10 0;
+#X connect 1 0 18 0;
+#X connect 10 0 19 0;
+#X connect 10 1 24 0;
+#X connect 11 0 12 0;
+#X connect 11 0 16 0;
+#X connect 11 0 22 0;
+#X connect 12 0 13 0;
+#X connect 12 1 13 1;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 18 1;
+#X connect 16 0 17 0;
+#X connect 17 0 19 1;
+#X connect 18 0 20 0;
+#X connect 18 0 21 0;
+#X connect 19 0 20 1;
+#X connect 20 0 2 0;
+#X connect 21 0 3 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 1;
+#X connect 24 0 21 1;
+#X connect 25 0 30 0;
+#X connect 26 0 27 0;
+#X connect 27 0 10 2;
+#X connect 27 0 29 0;
+#X connect 30 0 10 4;
+#X connect 30 0 28 0;
+#X coords 0 -1 1 1 150 300 2 100 100;
