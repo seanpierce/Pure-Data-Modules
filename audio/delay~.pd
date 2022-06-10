@@ -1,0 +1,67 @@
+#N canvas 421 77 958 760 12;
+#X obj 150 100 cnv 15 150 300 empty empty Delay 56 12 1 14 -237241
+-66577 0;
+#X obj -12 735 inlet~;
+#X obj 68 797 r~ \$0-feedback;
+#X obj 68 845 delwrite~ delsig 2000;
+#X obj 146 931 r \$0-mix-send;
+#X obj 146 979 swap 1;
+#X obj 146 1027 -;
+#X obj 146 1075 pack f 50;
+#X obj 146 1123 line~;
+#X obj 302 1073 pack f 50;
+#X obj 302 1121 line~;
+#X obj 0 1245 outlet~;
+#X obj 56 1113 *~;
+#X obj 494 1227 *~;
+#X obj 118 1245 outlet~;
+#X obj 496 843 r \$0-delaytime-send;
+#X obj 496 899 * 2000;
+#X obj 496 947 pack f 50;
+#X obj 496 995 line~;
+#X obj 496 1043 delread4~ delsig;
+#X obj 808 1187 r \$0-feedback-send;
+#X obj 808 1235 pack f 50;
+#X obj 808 1283 line~;
+#X obj 772 1333 *~;
+#X obj 772 1381 s~ \$0-feedback;
+#X obj 56 1187 +~;
+#X obj 165 209 vsl 40 150 0 1 0 0 \$0-delaytime-send empty Time 0 -9
+0 10 -262144 -1 -1 300 1;
+#X obj 245 209 vsl 40 150 0 1 0 0 \$0-feedback-send empty FB 0 -9 0
+10 -262144 -1 -1 7900 1;
+#X obj 168 144 hsl 115 30 0 1 0 0 \$0-mix-send empty Wet:Dry -2 -8
+0 10 -262144 -1 -1 5400 1;
+#X obj 151 101 cnv 15 16 16 empty empty IN 2 6 0 8 -237241 -66577 0
+;
+#X obj 154 379 cnv 15 16 16 empty empty OUT:L -2 16 0 8 -237241 -66577
+0;
+#X obj 272 379 cnv 15 16 16 empty empty OUT:R 2 16 0 8 -237241 -66577
+0;
+#X connect 1 0 3 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 12 1;
+#X connect 9 0 10 0;
+#X connect 10 0 13 1;
+#X connect 12 0 25 0;
+#X connect 13 0 25 1;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 13 0;
+#X connect 19 0 23 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 1;
+#X connect 23 0 24 0;
+#X connect 25 0 11 0;
+#X connect 25 0 14 0;
+#X coords 0 -1 1 1 150 300 2 150 100;
