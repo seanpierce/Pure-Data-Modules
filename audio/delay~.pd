@@ -26,11 +26,11 @@
 #X obj 772 1333 *~;
 #X obj 772 1381 s~ \$0-feedback;
 #X obj 56 1187 +~;
-#X obj 165 209 vsl 40 150 0 1 0 0 \$0-delaytime-send empty Time 0 -9
-0 10 -262144 -1 -1 300 1;
-#X obj 245 209 vsl 40 150 0 1 0 0 \$0-feedback-send empty FB 0 -9 0
-10 -262144 -1 -1 7900 1;
-#X obj 168 144 hsl 115 30 0 1 0 0 \$0-mix-send empty Wet:Dry -2 -8
+#X obj 165 214 vsl 40 150 0 1 0 0 \$0-delaytime-send empty Time 0 -9
+0 10 -262144 -1 -1 12100 1;
+#X obj 244 214 vsl 40 150 0 1 0 0 \$0-feedback-send empty FB 0 -9 0
+10 -262144 -1 -1 14900 1;
+#X obj 168 149 hsl 115 30 0 1 0 0 \$0-mix-send empty Dry:Wet -2 -8
 0 10 -262144 -1 -1 5400 1;
 #X obj 151 101 cnv 15 16 16 empty empty IN 2 6 0 8 -237241 -66577 0
 ;
