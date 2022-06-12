@@ -19,4 +19,4 @@ git clone [this repo] modules
 
 ## Usage
 
-Each module can be targetted by their namespace and filename. Example, if there is a module in the `audio` folder called `reverb~.pd`, you should create an object with the name `[audio/reverb~]`.
+Each module can be targetted by it's namespace and filename. Example, if there is a module in the `audio` folder called `reverb~.pd`, you should create an object with the name `[audio/reverb~]`.
