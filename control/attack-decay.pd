@@ -1,0 +1,66 @@
+#N canvas 617 122 623 524 12;
+#X obj 10 10 cnv 15 150 300 empty empty Dual_A/D 42 12 1 14 -237241
+-66577 0;
+#X obj 314 154 pack 1 100;
+#X obj 404 186 pack 0 500;
+#X obj 404 153 delay 100;
+#X obj 311 46 inlet;
+#X obj 365 257 outlet;
+#X obj 365 229 line;
+#X obj 25 59 vsl 40 100 0 1000 0 0 \$0-att-1 empty Att:1 0 -9 0 10
+-262144 -1 -1 100 1;
+#X obj 407 32 r \$0-att-1;
+#X obj 496 33 r \$0-dec-1;
+#X obj 102 59 vsl 40 100 0 3000 0 0 \$0-dec-1 empty Dec:1 0 -9 0 10
+-262144 -1 -1 8000 1;
+#X obj 276 73 r \$0-man-trig-1;
+#X text 313 25 AD 1;
+#X obj 73 97 bng 20 250 50 0 \$0-man-trig-1 empty TRIG -2 -6 0 10 -242196
+-33289 -33289;
+#X obj 25 186 vsl 40 100 0 1000 0 0 \$0-att-2 empty Att:2 0 -9 0 10
+-262144 -1 -1 900 1;
+#X obj 102 186 vsl 40 100 0 3000 0 0 \$0-dec-2 empty Dec:2 0 -9 0 10
+-262144 -1 -1 1500 1;
+#X obj 73 224 bng 20 250 50 0 \$0-man-trig-2 empty TRIG -2 -6 0 10
+-242196 -33289 -33289;
+#X obj 329 441 pack 1 100;
+#X obj 419 473 pack 0 500;
+#X obj 419 440 delay 100;
+#X obj 326 333 inlet;
+#X obj 380 544 outlet;
+#X obj 380 516 line;
+#X text 328 312 AD 2;
+#X obj 422 319 r \$0-att-2;
+#X obj 511 320 r \$0-dec-2;
+#X obj 291 360 r \$0-man-trig-2;
+#X obj 33 292 cnv 15 1 1 empty empty OUT:1 -20 12 0 8 -237241 -66577
+0;
+#X obj 114 293 cnv 15 1 1 empty empty OUT:2 20 12 0 8 -237241 -66577
+0;
+#X obj 23 17 cnv 15 1 1 empty empty TR:1 -10 0 0 8 -237241 -66577 0
+;
+#X obj 129 17 cnv 15 1 1 empty empty TG:2 10 0 0 8 -237241 -66577 0
+;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 8 0 1 1;
+#X connect 8 0 3 1;
+#X connect 9 0 2 1;
+#X connect 11 0 1 0;
+#X connect 11 0 3 0;
+#X connect 17 0 22 0;
+#X connect 18 0 22 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 0;
+#X connect 20 0 19 0;
+#X connect 22 0 21 0;
+#X connect 24 0 17 1;
+#X connect 24 0 19 1;
+#X connect 25 0 18 1;
+#X connect 26 0 17 0;
+#X connect 26 0 19 0;
+#X coords 0 -1 1 1 150 300 2 10 10;
