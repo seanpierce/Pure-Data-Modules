@@ -1,79 +1,79 @@
 #N canvas 0 25 1440 847 12;
-#X obj 101 101 cnv 15 225 300 empty empty Rec/Out 86 12 1 14 -237241
+#X obj 100 100 cnv 15 225 300 empty empty Rec/Out 86 12 1 14 -237241
 -66577 0;
-#X obj 344 534 *~;
-#X obj 384 534 *~;
-#X obj 351 570 dac~;
-#X obj 118 287 vsl 40 101 0 1 0 0 \$0-output-send \$0-output-recv O:0.2
-0 -9 0 10 -262144 -1 -66577 2000 1;
-#X obj 355 448 pack f 50;
-#X obj 355 471 line~;
-#X obj 118 138 vsl 40 101 0 1 0 0 \$0-input-send \$0-input-recv I:0.2
-0 -9 0 10 -262144 -1 -66577 2000 1;
-#X obj 509 274 r \$0-output-send;
-#X obj 509 320 s \$0-output-recv;
-#X msg 509 297 label O:\$1;
-#X obj 358 129 loadbang;
-#X text 508 250 Update Output label;
-#X obj 249 535 *~;
-#X obj 289 535 *~;
-#X obj 260 449 pack f 50;
-#X obj 260 472 line~;
-#X text 358 251 Update Input label;
-#X obj 359 274 r \$0-input-send;
-#X obj 359 320 s \$0-input-recv;
-#X msg 359 297 label I:\$1;
-#X obj 175 679 writesf~ 2;
-#X obj 36 539 savepanel;
-#X msg 36 585 open \$1;
-#X obj 36 516 sel 1 0;
-#X obj 36 562 t s b;
-#X obj 118 563 del 10;
-#X msg 118 586 start;
-#X msg 179 587 stop;
-#X obj 118 251 tgl 15 0 empty empty R 5 8 0 10 -242260 -262144 -262144
+#X obj 343 533 *~;
+#X obj 383 533 *~;
+#X obj 350 569 dac~;
+#X obj 117 286 vsl 40 101 0 1 0 0 \$0-output-send \$0-output-recv O:0.44
+0 -9 0 10 -262144 -1 -66577 4400 1;
+#X obj 354 447 pack f 50;
+#X obj 354 470 line~;
+#X obj 117 137 vsl 40 101 0 1 0 0 \$0-input-send \$0-input-recv I:0.53
+0 -9 0 10 -262144 -1 -66577 5300 1;
+#X obj 508 273 r \$0-output-send;
+#X obj 508 319 s \$0-output-recv;
+#X msg 508 296 label O:\$1;
+#X obj 357 128 loadbang;
+#X text 507 249 Update Output label;
+#X obj 248 534 *~;
+#X obj 288 534 *~;
+#X obj 259 448 pack f 50;
+#X obj 259 471 line~;
+#X text 357 250 Update Input label;
+#X obj 358 273 r \$0-input-send;
+#X obj 358 319 s \$0-input-recv;
+#X msg 358 296 label I:\$1;
+#X obj 174 678 writesf~ 2;
+#X obj 35 538 savepanel;
+#X msg 35 584 open \$1;
+#X obj 35 515 sel 1 0;
+#X obj 35 561 t s b;
+#X obj 117 562 del 10;
+#X msg 117 585 start;
+#X msg 178 586 stop;
+#X obj 117 250 tgl 15 0 empty empty R 5 8 0 10 -242260 -262144 -262144
 0 1;
-#X obj 12 135 s \$0-record;
-#X obj 36 492 r \$0-record;
-#X obj 142 251 tgl 15 0 empty empty M 5 8 0 10 -47404 -1 -262144 0
+#X obj 11 134 s \$0-record;
+#X obj 35 491 r \$0-record;
+#X obj 141 250 tgl 15 0 empty empty M 5 8 0 10 -47404 -1 -262144 0
 1;
-#X obj 26 262 s \$0-mute;
-#X obj 560 485 r \$0-mute;
-#X obj 560 509 sel 0 1;
-#X msg 560 533 0;
-#X obj 369 422 s \$0-out-level;
-#X obj 449 485 r \$0-out-level;
-#X obj 479 509 sel 0;
-#X obj 493 533 f;
-#X msg 429 128 \; pd dsp 1 \;;
-#X obj 358 216 s \$0-set-initial-level;
-#X obj 47 38 r \$0-set-initial-level;
-#X obj 530 571 s \$0-set-mute-level;
-#X obj 47 67 r \$0-set-mute-level;
-#X msg 513 128 \; pd dsp 0 \;;
-#X obj 115 449 inlet~;
-#X obj 165 449 inlet~;
-#X obj 401 638 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 25 261 s \$0-mute;
+#X obj 559 484 r \$0-mute;
+#X obj 559 508 sel 0 1;
+#X msg 559 532 0;
+#X obj 368 421 s \$0-out-level;
+#X obj 448 484 r \$0-out-level;
+#X obj 478 508 sel 0;
+#X obj 492 532 f;
+#X msg 428 127 \; pd dsp 1 \;;
+#X obj 357 215 s \$0-set-initial-level;
+#X obj 46 37 r \$0-set-initial-level;
+#X obj 529 570 s \$0-set-mute-level;
+#X obj 46 66 r \$0-set-mute-level;
+#X msg 512 127 \; pd dsp 0 \;;
+#X obj 114 448 inlet~;
+#X obj 164 448 inlet~;
+#X obj 400 637 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 399 193 s \$0-start-display;
-#X obj 401 612 r \$0-start-display;
-#X obj 401 657 metro 100;
-#X obj 351 690 tabwrite~ Left;
-#X obj 460 690 tabwrite~ Right;
-#X obj 173 136 cnv 15 136 106 empty empty empty 20 12 0 14 -262064
+#X obj 398 192 s \$0-start-display;
+#X obj 400 611 r \$0-start-display;
+#X obj 400 656 metro 100;
+#X obj 350 689 tabwrite~ Left;
+#X obj 459 689 tabwrite~ Right;
+#X obj 172 135 cnv 15 136 106 empty empty empty 20 12 0 14 -262064
 -66577 0;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Left 100 float 4;
 #X coords 0 1 99 -1 136 106 2 0 0;
-#X restore 173 136 graph;
+#X restore 172 135 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Right 100 float 4;
 #X coords 0 1 99 -1 136 106 2 0 0;
-#X restore 173 136 graph;
-#X obj 156 119 cnv 15 80 16 empty empty empty 20 12 0 14 -237242 -66577
+#X restore 172 135 graph;
+#X obj 155 118 cnv 15 80 16 empty empty empty 20 12 0 14 -237242 -66577
 0;
-#X obj 181 269 vu 20 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X obj 256 269 vu 20 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 180 268 vu 20 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 255 268 vu 20 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #N canvas 0 25 450 300 vu 0;
 #X obj 59 129 env~ 1024;
 #X obj 161 111 abs~;
@@ -116,7 +116,7 @@ to convert it to dBFS., f 31;
 #X connect 16 1 2 0;
 #X connect 19 0 10 0;
 #X connect 20 0 19 0;
-#X restore 403 569 pd vu;
+#X restore 402 568 pd vu;
 #N canvas 0 25 450 300 vu 0;
 #X obj 59 129 env~ 1024;
 #X obj 161 111 abs~;
@@ -159,21 +159,23 @@ to convert it to dBFS., f 31;
 #X connect 16 1 2 0;
 #X connect 19 0 10 0;
 #X connect 20 0 19 0;
-#X restore 450 569 pd vu;
-#X text 355 4 record-output-channel~ is an object used as the final
+#X restore 449 568 pd vu;
+#X text 354 3 record-output-channel~ is an object used as the final
 gain- stage/ output module of a signal flow before it reaches the dac~.
 This module also has the ability to record the incoming audio to a
 .wav file on disc. Users can monitor the input signal using a stacked-array
 representing the left and right channels of the incoming signal. The
 left and right channels of the output signal is monitored using VU
 meters.;
-#X msg 358 193 0.2;
-#X obj 302 102 cnv 15 16 16 empty empty IN:R 2 6 0 8 -237241 -66577
+#X msg 357 192 0.2;
+#X obj 301 101 cnv 15 16 16 empty empty IN:R 2 6 0 8 -237241 -66577
 0;
-#X obj 102 102 cnv 15 16 16 empty empty IN:L 2 6 0 8 -237241 -66577
+#X obj 101 101 cnv 15 16 16 empty empty IN:L 2 6 0 8 -237241 -66577
 0;
-#X text 628 119 __color palette__ * background: #E4E8E0 * red: #EC244C
+#X text 627 118 __color palette__ * background: #E4E8E0 * red: #EC244C
 * blue: #2C90AC * yellow: #FCF8BC;
+#X obj 268 609 clip~ -2 2;
+#X obj 236 585 clip~ -2 2;
 #X connect 1 0 3 0;
 #X connect 1 0 61 0;
 #X connect 2 0 3 1;
@@ -188,12 +190,8 @@ meters.;
 #X connect 10 0 9 0;
 #X connect 11 0 64 0;
 #X connect 11 0 50 0;
-#X connect 13 0 1 0;
-#X connect 13 0 21 0;
-#X connect 13 0 53 0;
-#X connect 14 0 2 0;
-#X connect 14 0 21 1;
-#X connect 14 0 54 0;
+#X connect 13 0 69 0;
+#X connect 14 0 68 0;
 #X connect 15 0 16 0;
 #X connect 16 0 13 1;
 #X connect 16 0 14 1;
@@ -232,4 +230,10 @@ meters.;
 #X connect 62 0 60 0;
 #X connect 62 1 60 1;
 #X connect 64 0 42 0;
+#X connect 68 0 21 1;
+#X connect 68 0 54 0;
+#X connect 68 0 2 0;
+#X connect 69 0 21 0;
+#X connect 69 0 53 0;
+#X connect 69 0 1 0;
 #X coords 0 -1 1 1 225 300 2 100 100;
